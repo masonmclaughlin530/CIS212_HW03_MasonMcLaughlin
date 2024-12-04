@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<style>
+
+div
+{
+    text-align: center;
+}
+
+.btn
+{
+    width: 100px;
+}
+
+body 
+{ 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        padding: 0; 
+} 
+
+header 
+{ 
+    background-color: #ffffff; 
+    color: #000000; 
+    text-align: center; 
+} 
+.container 
+{ 
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 95%; 
+    margin: 0 auto; 
+    padding: 20px; 
+} 
+nav 
+{ 
+    background-color: #242424; 
+    padding: 10px; 
+} 
+
+nav a 
+{ 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px; 
+    margin-right: 10px; 
+    display: inline-block; 
+}
+    
+</style>
+<html>
+    <script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/popper.min.js"></script>
+    <script scr="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootsrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+
+
+    <title>Register</title>
+    <head>
+        
+        <body>
+            <header><h1>Click Counter</h1>
+            
+            </header>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </body>
+    </head>
+
+
+
+    <body onload="registerStart()">
+        <h1>Sign Up</h1>
+        <div>
+            <form action="register.php" method="post">
+                <input type="text" name="register_username" placeholder="Username">
+                <br><br>
+                <input type="text" name="register_fname" placeholder="First name">
+                <br><br>
+                <input type="text" name="register_lname" placeholder="Last name">
+                <br><br>
+                <input type="text" name="register_password" placeholder="Password">
+                <br><br>
+                <input type="submit" name="register_registerBtn" value="Sign Up" class="btn">
+            </form>
+
+
+
+
+        </div>
+        
+    </body>
+
+
+
+
+</html>

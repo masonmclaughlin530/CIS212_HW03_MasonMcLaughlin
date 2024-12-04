@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+div
+{
+    text-align: center;
+}
+
+.btn
+{
+    width: 100px;
+}
+
+body 
+{ 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        padding: 0; 
+} 
+
+header 
+{ 
+    background-color: #ffffff; 
+    color: #000000; 
+    text-align: center; 
+} 
+.container 
+{ 
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 95%; 
+    margin: 0 auto; 
+    padding: 20px; 
+} 
+nav 
+{ 
+    background-color: #242424; 
+    padding: 10px; 
+} 
+
+nav a 
+{ 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px; 
+    margin-right: 10px; 
+    display: inline-block; 
+}
+
+</style>
+
+
+<script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script scr="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/popper.min.js"></script>
+<script scr="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootsrap/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src="scripts.js"></script>
+
+
+<title>Click Counter</title>
+<head>
+    
+    <body>
+        <header><h1>Click Counter</h1>
+        
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="game.html">Click Counter</a>
+            <a href="highscore.html">Highscores</a>
+        </nav>
+    </body>
+</head>
+
+
+<body onload="highscoreLoad()">
+    <h1>Highscores</h1>
+    <div class="row"></div>
+
+    <div>
+        <button class = "btn btn_primary" onclick="location.href = 'highscores.php?buttonPressed=highToLow'">All User HighScores</button>
+        <button class="btn btn_primary" onclick="location.href = 'highscores.php?buttonPressed=user' + sessionStorage.getItem('usernamestored')">Your Highscores</button>
+        <button class = "btn btn_primary" onclick="location.href = 'highscores.php?buttonPressed=lowToHigh'">Lowest Scores</button>
+        
+    </div>
+    
+</body>
+
+
+</html>
