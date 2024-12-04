@@ -78,6 +78,7 @@ function gameIsOver()
     timerFunction("Good Job, Click Start To Play Again");
     gameOver = true;
     gameRunning = false;
+    callPhp();
     
 }
 
