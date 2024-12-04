@@ -85,6 +85,8 @@ function gameIsOver()
 //found this way on stack overflow 
 //not sure if there was a better way, but this seems to work
 
+//change this to scripts with getting the variables
+//add button add score button
 function callPhp()
 {
     //score is set
