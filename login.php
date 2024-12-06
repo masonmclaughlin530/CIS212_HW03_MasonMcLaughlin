@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0)
 {
-    echo "<script>sessionStorage.setItem('loggedInUser','" . $username . "');</script>";
+    echo "<script>sessionStorage.setItem('usernamestored','" . $username . "');</script>";
     echo "<script>location.href = 'game.html';</script>";
 }
 else

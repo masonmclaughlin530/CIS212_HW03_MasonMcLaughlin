@@ -48,6 +48,12 @@ nav a
     display: inline-block; 
 }
 
+table.highscoreTable
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 </style>
 
 
@@ -81,13 +87,31 @@ nav a
     <h1>Highscores</h1>
     <div class="row"></div>
 
+    <form action="highscores.php" method="get">
+        <div>
+            <input type="hidden" name="highscore_username" id="highscore_username" value="">
+            <input type="submit" name="highToLow" value="All User HighScores" id="highToLow">
+            <input type="submit" name="user" value="All User HighScores" id="user">
+            <input type="submit" name="lowToHigh" value="All User HighScores" id="lowToHigh">
+
+
+            
+
+        </div>
+    </form>
+
     <div>
-        <button class = "btn btn_primary" onclick="location.href = 'highscores.php?buttonPressed=highToLow'">All User HighScores</button>
-        <button class="btn btn_primary" onclick="location.href = 'highscores.php?buttonPressed=user' + sessionStorage.getItem('usernamestored')">Your Highscores</button>
-        <button class = "btn btn_primary" onclick="location.href = 'highscores.php?buttonPressed=lowToHigh'">Lowest Scores</button>
-        
-    </div>
+    <table id = "highscoreTable">
+        <tr>
+            <th>Username</th>
+            <th>Score</th>
+            <th>Clicks Per Second</th>
+            <th>Date</th>
+        </tr>
+
+    </table>
     
+    </div>
 </body>
 
 

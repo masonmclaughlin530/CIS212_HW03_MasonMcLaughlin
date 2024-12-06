@@ -69,7 +69,7 @@ nav a
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
                 <a href="game.html">Click Counter</a>
-                <a href="highscore.html">Highscores</a>
+                <a href="highscoresPage.php">Highscores</a>
             </nav>
         </body>
     </head>
@@ -88,6 +88,18 @@ nav a
 
 
         </div>
+
+
+        <br><br><br><br>
+        <form action="score.php" method="post">
+            <input type="hidden" name="game_username" id="game_username" value="">
+            <input type="hidden" name="game_clicks" id="game_clicks" value="">
+            <input type="hidden" name="game_cps" id="game_cps" value="">
+            <div>
+                <input type="submit" name="restart" value="Restart Game">
+            </div>
+            
+        </form>
     </body>
 
 

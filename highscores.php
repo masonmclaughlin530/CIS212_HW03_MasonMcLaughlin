@@ -16,22 +16,25 @@ else
     //echo "<h1> GOOD CONNECTION </h1>";
 }
 
-$buttonPressed = $_GET['buttonPressed'];
 
-if ($button == 'highToLow')
+if(isset($_GET['highToLow']))
 {
     $sql = 'SELECT * FROM scores ORDER BY totalClicks';
+    
 }
-else if ($button == 'user')
+
+if(isset($_GET['user']))
 {
-    $loggedInUser = $_GET['user'];
+    $user = $_GET['highscore_username'];
 
     $sql = "SELECT * FROM scores WHERE username = '" . $user . "' ORDER BY totalClicks";
 }
-else if($button == 'lowToHigh')
+
+if(isset($_GET['lowToHigh']))
 {
     $sql = 'SELECT * FROM scores ORDER BY totalClicks DESC';
 }
+
 
 
 $results = $conn->query($sql);
@@ -39,13 +42,11 @@ $results = $conn->query($sql);
 
 $i = 0;
 
-$tableDisplay = "<tr><th>USERNAME</th><th>SCORE</th><th>CLICKS PER SECOND</th><th>DATE</th></tr>";
-
 if($results->num_rows > 0)
 {
     while($row = $results->fetch_assoc())
     {
-        $tableDisplay .= "<tr><td>" . $row['username'] . "</td><td>" . $row['totalClicks'] . "</td><td>" . $row['clicksPerSecond'] . "</td><td>" . $row['date'] . "</td><tr>";
+        echo "<tr><td>" . $row['username'] . "</td><td>" . $row['totalClicks'] . "</td><td>" . $row['clicksPerSecond'] . "</td><td>" . $row['date'] . "</td><tr>";
         $i++;
         if ($i >= 10)
         {

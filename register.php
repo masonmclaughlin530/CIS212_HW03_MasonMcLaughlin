@@ -38,11 +38,13 @@
         else
         {
             echo "Error";
+            echo "<script>location.href='register.html'</script>";
         }
     } 
     else
     {
         echo "Error";
+        echo "<script>location.href='register.html'</script>";
     }
  }
 
